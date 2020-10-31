@@ -1,3 +1,3 @@
 export const dataList = []
 
-export const DEFAULT_THEME = 0
+export const DEFAULT_THEME = true

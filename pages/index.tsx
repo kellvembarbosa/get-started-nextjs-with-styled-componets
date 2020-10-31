@@ -1,11 +1,14 @@
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
 import Main from '../components/layout/Main'
-import { useTheme } from '../hooks/theme'
+import { themeState } from '../recoils/atoms'
+import { changeMode } from '../recoils/selectors';
 
 export default function Home() {
-  const { themeId, changeTheme } = useTheme()
+  const isDarkMode = useRecoilValue(themeState)
+  const setDarkMode = useSetRecoilState(changeMode); 
   return (
     <Main>
-      <button onClick={() => changeTheme(themeId ? 0 : 1) }>Alterar Theme { themeId == 1 ? 'DARK' : 'LIGHT' } </button>
+      <button onClick={() => setDarkMode(!isDarkMode) }>Alterar Theme {isDarkMode ? 'LIGHT' : 'DARK' } </button>
     </Main>
   )
 }

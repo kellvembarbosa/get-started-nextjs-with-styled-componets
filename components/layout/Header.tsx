@@ -11,4 +11,6 @@ export default function Header() {
 
 const Container = styled.div`
     display: flex;
+    height: 80px; 
+    background-color: ${ ({theme}) => theme.colors.SecundaryBackgroundColor }
 `;

@@ -1,70 +1,48 @@
 import { atom } from "recoil"
+import { DefaultTheme } from 'styled-components'
 
-export interface ThemeObject {
+export const DARK_THEME: DefaultTheme = {
     colors: {
-        primaryColor: string,
-        secundaryColor: string,
-        MainBackgroundColor: string,
-        SecundaryBackgroundColor : string,
-        cardColor: string,
+        primaryColor: "#4447E2",
+        secundaryColor: "#5F5F6E",
+        MainBackgroundColor: "#131419",
+        SecundaryBackgroundColor: "#1C1C24",
+        cardColor: "#2D2D3A",
 
-        textColor: string,
-        secundaryTextColor: string,
+        textColor: "#fff",
+        secundaryTextColor: "#fdfdfd",
 
-        textDarkColor: string,
-        secundaryTextDarkColor: string
+        textDarkColor: "#000",
+        secundaryTextDarkColor: "#333"
     },
+
     breakpoints: {
-        sm: string,
-        md: string,
-        lg: string,
-        xl: string,
+        sm: '576px',
+        md: '768px',
+        lg: '992px',
+        xl: '1200px',
     }
 }
 
-export const themes: ThemeObject[] = [
-    {
-        colors: {
-            primaryColor: "#4447E2",
-            secundaryColor: "#5F5F6E",
-            MainBackgroundColor: "#131419",
-            SecundaryBackgroundColor: "#1C1C24",
-            cardColor: "#2D2D3A",
+export const LIGHT_THEME: DefaultTheme = {
+    colors: {
+        primaryColor: "#4447E2",
+        secundaryColor: "#5F5F6E",
+        MainBackgroundColor: "#fdfdfd",
+        SecundaryBackgroundColor: "#ffff",
+        cardColor: "#fdfdfd",
 
-            textColor: "#fff",
-            secundaryTextColor: "#fdfdfd",
+        textColor: "#000",
+        secundaryTextColor: "#333",
 
-            textDarkColor: "#000",
-            secundaryTextDarkColor: "#333"
-        },
-
-        breakpoints: {
-            sm: '576px',
-            md: '768px',
-            lg: '992px',
-            xl: '1200px',
-        }
+        textDarkColor: "#fff",
+        secundaryTextDarkColor: "#fdfdfd"
     },
-    {
-        colors: {
-            primaryColor: "#4447E2",
-            secundaryColor: "#5F5F6E",
-            MainBackgroundColor: "#fdfdfd",
-            SecundaryBackgroundColor: "#ffff",
-            cardColor: "#fdfdfd",
 
-            textColor: "#000",
-            secundaryTextColor: "#333",
-
-            textDarkColor: "#fff",
-            secundaryTextDarkColor: "#fdfdfd"
-        },
-
-        breakpoints: {
-            sm: '576px',
-            md: '768px',
-            lg: '992px',
-            xl: '1200px',
-        }
+    breakpoints: {
+        sm: '576px',
+        md: '768px',
+        lg: '992px',
+        xl: '1200px',
     }
-]
+}
