@@ -12,6 +12,7 @@ function ThemeRecoilProvider({ children }) {
 
     useEffect(() => {
         const themeLocalID = localStorage.getItem('DARK_MODE')
+        console.log("themeID ========> ", themeLocalID)
         setDarkMode(themeLocalID ? themeLocalID === 'true' : DEFAULT_THEME)
         setMonted(true)
     }, [])
