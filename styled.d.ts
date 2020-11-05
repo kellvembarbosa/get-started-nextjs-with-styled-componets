@@ -17,7 +17,10 @@ declare module 'styled-components' {
         secundaryTextColor: string,
 
         textDarkColor: string,
-        secundaryTextDarkColor: string
+        secundaryTextDarkColor: string,
+
+        switchSun: string;
+        switchMoon: string;
     },
     breakpoints: {
         sm: string,
